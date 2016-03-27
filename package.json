@@ -1,0 +1,14 @@
+{
+  "name": "meadowlark",
+  "version": "1.0.0",
+  "description": "Meadowlark Travel - A Node and Express project ",
+  "main": "meadowlark.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Christopher Ford",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
