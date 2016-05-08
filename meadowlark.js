@@ -16,7 +16,8 @@ app.get('/', function(req, res) {
 });
 
 app.get('/about', function(req, res) {
-    res.render('about');
+    var randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
+    res.render('about', { fortune: randomFortune });
 });
 
 //Custom 404 Page
@@ -34,3 +35,12 @@ app.use(function(req, res) {
 app.listen(app.get('port'), function() {
     console.log(' Express started on http://localhost:' + app.get('port') + '; press Ctrl-C to terminate');
 })
+
+//Fortune cookie array
+var fortunes = [
+    "Conquer your fears or they will conquer you.",
+    "Rivers need springs.",
+    "Do not fear what you do not know.",
+    "You will have a pleasent surprise.",
+    "Whenever possible, keep it simple"  
+];
